@@ -1,0 +1,9 @@
+package: temperature-service
+import:
+- package: github.com/kataras/iris
+  version: ~4.3.0
+  subpackages:
+  - iris
+- package: github.com/d2r2/go-dht
+- package: github.com/op/go-logging
+  version: ~1.0.0
