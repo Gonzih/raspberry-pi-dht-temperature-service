@@ -16,7 +16,7 @@ func temperatureHandler(w http.ResponseWriter, r *http.Request, _ httprouter.Par
 	gpioMutex.Lock()
 	defer gpioMutex.Unlock()
 
-	temperature, humidity, retried, err := dht.ReadDHTxxWithRetry(dht.DHT11, 4, true, 10)
+	temperature, humidity, retried, err := dht.ReadDHTxxWithRetry(dht.DHT11, 48, true, 10)
 
 	if err != nil {
 		fmt.Fprintf(w, "Error occured during temp readout: %s", err)
